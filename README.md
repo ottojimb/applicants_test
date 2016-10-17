@@ -46,10 +46,10 @@ At a high level the navigation will have two main states
 
 ###Install the exercise locally
 ```
-git clone git@github.com:hugeinc/NavExercise.git
-cd NavExercise
-npm install
-npm start
+  1 git@github.com:Liftitapp/applicants_test.git
+  2 cd applicants_test
+  3 npm install
+  4 npm start
 ```
 
 ## Design Specifications
