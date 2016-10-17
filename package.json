@@ -1,0 +1,19 @@
+{
+  "name": "NavExercise",
+  "description": "Exercise for candidates to complete where they will build a responsive nav driven from json",
+  "version": "0.1.0",
+  "authors": [
+    "Jorge Madrid <jorge@liftit.co>",
+    "Angel Botto <angel@liftit.co>",
+    "Michel Perez <michel@liftit.com>"
+  ],
+  "license": "© 2016 Liftit. All Rights Reserved.",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "express": "~4.2.0",
+    "morgan": "~1.0.0"
+  }
+}
