@@ -60,3 +60,19 @@ At a high level the navigation will have two main states
 * **Orange** #FD6538
 * **White** #fff
 * **Translucent Orange** rgba(254,100,45,0.45)
+
+### How to run test
+
+Please run:
+
+```
+npm test
+```
+
+### How to build docs
+
+```
+npm run build:docs
+```
+
+NOTE: The documentation will be generated to the "out" folder 

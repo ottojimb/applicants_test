@@ -1,0 +1,121 @@
+@import "reset";
+@import "fonts.css";
+
+$orange: #FD6538;
+$translucent-orange: rgba(254, 100, 45, 0.45);
+$white: #FFF;
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+//main navigation bar
+#navBar {
+    clear: both;
+    font-family: 'Galaxie';
+    font-size: 0.8em;
+    background-color: $orange;
+
+    > ul {
+        padding: 5px 0;
+        > li {
+            color: $white;
+            display: inline-block;
+            padding: 10px 5px 10px 5px;
+            position: relative;
+
+            > a {
+                margin-top: 3px;
+                padding: 5px;
+                padding-bottom: 10px;
+            }
+
+            > ul {
+                background-color: $white;
+                border-radius: 4px;
+                box-shadow: 1px 1px 1px $translucent-orange;
+                display: none;
+                padding: 10px 0;
+                position: absolute;
+                left: 0;
+                top: 80%;
+                z-index: 2000;
+
+                > li {
+                    color: $orange;
+                    display: block;
+                    padding: 10px;
+                    width: 150px;
+
+                    &:hover {
+                        background-color: $orange;
+                        color: $white;
+                    }
+                }
+            }
+
+            &.active {
+                background-color: $white;
+                border-radius: 4px 4px 0 0;
+                color: $orange;
+
+                > ul {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        opacity: 0;
+        left: -768px;
+        position: absolute;
+        transition: 0.5s;
+        transition-timing-function: ease-out;
+        width: 100%;
+
+        &.active {
+            opacity: 1;
+            left: 0;
+        }
+
+        ul {
+            li {
+                display: block;
+                text-align: center;
+
+                ul {
+                    box-shadow: none;
+                    display: block;
+                    position: static;
+                    width: 100%;
+
+                    li {
+                        display: block;
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#hamburger {
+    background-color: $translucent-orange;
+    cursor: pointer;
+    display: none;
+    float: left;
+    position: fixed;
+    z-index: 10;
+
+    img {
+        width: 32px;
+        height: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+}

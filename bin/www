@@ -1,8 +1,10 @@
 #!/usr/bin/env node
+var express = require('express');
 var app = require('../app');
 var port = process.env.PORT || 3000;
 
 app.set('port', port);
+app.use('/public', express.static('public'));
 
 app.listen(port, function() {
   console.log('Liftit appliance test is available at http://localhost:' + port);
