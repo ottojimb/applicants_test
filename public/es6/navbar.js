@@ -42,19 +42,21 @@ class NavBar {
         let hamburger = document.getElementById('hamburger');
         let img = document.querySelector('#hamburger img');
 
-        hamburger.addEventListener('click', 
-            (element) => {
-                if (this.activeMenu) {
-                    this.activeMenu = false;
-                    img.src = 'public/images/toggle-open.svg';
-                    menu.classList.remove('active');
-                } else {
-                    this.activeMenu = true;
-                    img.src = 'public/images/toggle-close.svg';
-                    menu.classList.add('active');
+        if (hamburger) {
+            hamburger.addEventListener('click', 
+                (element) => {
+                    if (this.activeMenu) {
+                        this.activeMenu = false;
+                        img.src = 'public/images/toggle-open.svg';
+                        menu.classList.remove('active');
+                    } else {
+                        this.activeMenu = true;
+                        img.src = 'public/images/toggle-close.svg';
+                        menu.classList.add('active');
+                    }
                 }
-            }
-        );
+            );
+        }
     }
 
     /**
