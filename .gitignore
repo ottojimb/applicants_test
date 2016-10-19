@@ -1,6 +1,7 @@
 # OS X-specific
 .DS_Store
 out/
+public/js/script.js
 
 # Logs
 logs
