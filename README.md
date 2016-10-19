@@ -72,7 +72,7 @@ npm test
 ### How to build docs
 
 ```
-npm run build:docs
+npm run build:doc
 ```
 
 NOTE: The documentation will be generated to the "out" folder 
